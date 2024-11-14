@@ -1,0 +1,253 @@
+/* Basic reset and body styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Title Section */
+.title-section {
+    text-align: center;
+    padding: 50px 0;
+    margin-top: 20px;
+}
+
+.title-section h1 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Project Section */
+.project-section {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(83, 6, 236, 0.737);
+    max-width: 1200px;
+    margin: 20px;
+    padding: 20px;
+    overflow: hidden;
+}
+
+/* Slider Styles */
+.slider {
+    flex: 1;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.slides {
+    display: flex;
+    width: calc(100% * 8); /* Double the slides for infinite effect */
+    animation: slide 30s linear infinite; /* Slower transition with infinite loop */
+}
+
+.slide {
+    width: calc(100% / 8); /* Adjust to show 4 images in view */
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Keyframes for continuous sliding animation */
+@keyframes slide {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); } /* Move to halfway for seamless loop */
+}
+
+/* Project Details */
+.project-details {
+    flex: 1;
+    padding: 20px;
+}
+
+.project-tag {
+    color: #d05dcb;
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.project-details h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.project-description {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Live Demo Button */
+.live-demo-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.live-demo-button:hover {
+    background-color: #555;
+}
+/* Container for buttons */
+.button-container {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between GitHub icon and Live Demo button */
+}
+
+/* GitHub Button */
+.github-button {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.github-button:hover {
+    transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+.github-icon {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Live Demo Button */
+.live-demo-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.live-demo-button:hover {
+    background-color: #555;
+}
+
+
+.l-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #000; /* Dark background */
+    z-index: 100;
+   /* Padding for the header */
+  }
+  
+  /* Navigation */
+  .nav {
+    display: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    height: 3rem;
+    padding-top: 0;
+    margin-left: 20px;
+  }
+  
+  /* Navigation menu */
+  .nav__menu {
+    display: flex;
+  }
+  
+  /* Navigation links list */
+  .nav__list {
+    display: flex;
+    list-style: none;
+  }
+  
+  /* Individual navigation items */
+  .nav__item {
+    margin-left: 3rem;
+    margin-bottom: 0;
+  }
+  
+  /* Navigation links */
+  .nav__link {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    text-transform: initial;
+    transition: color 0.3s;
+  }
+  
+  .nav__link:hover {
+    color: #ff6347; /* Hover effect: change color */
+  }
+  
+  /* Hamburger Menu */
+  .nav__toggle {
+    display: none;
+    cursor: pointer;
+    color: white;
+    font-size: 30px;
+  }
+  .nav__toggle, .nav__close {
+    display: none;
+  }
+  
+  /* Mobile Styles */
+  @media (max-width: 768px) {
+    /* Hide the navigation menu by default on mobile */
+    .nav__menu {
+        display: none;
+        width: 100%;
+        text-align: center;
+        margin-top: 10px;
+    }
+  
+    /* Make the hamburger menu visible */
+    .nav__toggle {
+        display: block;
+    }
+  
+    /* Show the navigation menu when the hamburger is clicked */
+    .nav__menu.active {
+        display: block;
+    }
+  
+    /* Style the mobile navigation links */
+    .nav__list {
+        flex-direction: column;
+        padding: 20px 0;
+    }
+  
+    .nav__item {
+        margin: 10px 0;
+    }
+  
+    /* Style the nav links for mobile */
+    .nav__link {
+        font-size: 18px;
+        text-transform: none;
+    }
+  }
